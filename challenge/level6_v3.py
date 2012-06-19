@@ -3,15 +3,12 @@
 import re
 import zipfile
 
-zf = '/home/warren/Downloads/channel.zip'
-
-print("Please input the nothing number:")
-nothing_no=input()
+nothing_no = '90052'
 
 afile = ''
 comm_str = ''
 
-with zipfile.ZipFile(zf) as f:
+with zipfile.ZipFile('channel.zip') as f:
     while nothing_no:
         afile = nothing_no+'.txt'
         lines = f.read(afile).decode('UTF-8')
